@@ -100,7 +100,8 @@ class TensorDataset():
 
     def __getitem__(self, index):
         img_path = self.data_list[index]
-        label_path = img_path.split(".")[0] + ".txt"
+        # label_path = img_path.split(".")[0] + ".txt"
+        label_path = img_path.replace("images","labels").replace(".jpg",".txt")
 
         # 归一化操作
         img = cv2.imread(img_path)
@@ -111,8 +112,10 @@ class TensorDataset():
         img = img.transpose(2,0,1)
 
         # 加载label文件
+
+        label = []
         if os.path.exists(label_path):
-            label = []
+            # label = []
             with open(label_path, 'r') as f:
                 for line in f.readlines():
                     l = line.strip().split(" ")
@@ -124,7 +127,9 @@ class TensorDataset():
                 #assert (label >= 0).all(), 'negative labels: %s'%label_path
                 #assert (label[:, 1:] <= 1).all(), 'non-normalized or out of bounds coordinate labels: %s'%label_path
         else:
-            raise Exception("%s is not exist" % label_path)  
+            print(f" 标签文件不存在，跳过：{label_path}")
+            label = np.zeros((0, 6), dtype=np.float32)  # 空标签也能继续训练
+            # raise Exception("%s is not exist" % label_path)  
         
         return torch.from_numpy(img), torch.from_numpy(label)
 

@@ -51,10 +51,10 @@ if __name__ == '__main__':
                                                  batch_size=batch_size,
                                                  shuffle=False,
                                                  collate_fn=utils.datasets.collate_fn,
-                                                 num_workers=nw,
+                                                 num_workers=0,
                                                  pin_memory=True,
                                                  drop_last=False,
-                                                 persistent_workers=True
+                                                 persistent_workers=False
                                                  )
 
     # 指定后端设备CUDA&CPU
@@ -131,17 +131,39 @@ if __name__ == '__main__':
             batch_num += 1
 
         # 模型保存
+        # if epoch % 10 == 0 and epoch > 0:
+        #     model.eval()
+        #     #模型评估
+        #     print("computer mAP...")
+        #     _, _, AP, _ = utils.utils.evaluation(val_dataloader, cfg, model, device)
+        #     print("computer PR...")
+        #     precision, recall, _, f1 = utils.utils.evaluation(val_dataloader, cfg, model, device, 0.3)
+        #     print("Precision:%f Recall:%f AP:%f F1:%f"%(precision, recall, AP, f1))
+
+
+        
+            
+        best_ap = 0
+        os.makedirs("weights", exist_ok=True)
+
+
         if epoch % 10 == 0 and epoch > 0:
             model.eval()
-            #模型评估
-            print("computer mAP...")
-            _, _, AP, _ = utils.utils.evaluation(val_dataloader, cfg, model, device)
-            print("computer PR...")
+            print(f"[EVAL] 开始第 {epoch} 轮验证集评估，准备计算 mAP...")
+    
+            AP = utils.utils.evaluation(val_dataloader, cfg, model, device)
+            print(f"[EVAL] mAP 计算完成，结果：{AP[0]:.4f}")
+
+            print("[EVAL] 开始计算 Precision / Recall / F1...")
             precision, recall, _, f1 = utils.utils.evaluation(val_dataloader, cfg, model, device, 0.3)
-            print("Precision:%f Recall:%f AP:%f F1:%f"%(precision, recall, AP, f1))
-
+            print(f"[EVAL] Precision: {precision:.4f}  Recall: {recall:.4f}  AP: {AP[0]:.4f}  F1: {f1:.4f}")
+            # print(f"[EVAL] Precision: {precision:.4f}  Recall: {recall:.4f}  AP: {AP[0]:.4f}  F1: {f1[0]:.4f}")
             torch.save(model.state_dict(), "weights/%s-%d-epoch-%fap-model.pth" %
-                      (cfg["model_name"], epoch, AP))
-
+                (cfg["model_name"], epoch, AP[0]))
+            # if AP > best_ap:
+            #     best_ap = AP
+            #     torch.save(model.state_Dict(),f"weights/best,pth")
+            #     print(f"[INFO] Saved new best model at epoch {epoch},AP:{AP:.4f}")
         # 学习率调整
+           
         scheduler.step()

@@ -362,12 +362,19 @@ def evaluation(val_dataloader, cfg, model, device, conf_thres = 0.01, nms_thresh
 
     labels = []
     sample_metrics = []  # List of tuples (TP, confs, pred)
+    # pbar = tqdm(val_dataloader)
+
+    # for imgs, targets in pbar:
+    #     imgs = imgs.to(device).float() / 255.0
+    #     targets = targets.to(device)       
+    print(f"[DEBUG] evaluation() 启动，共 {len(val_dataloader)} 张验证图像")
     pbar = tqdm(val_dataloader)
 
-    for imgs, targets in pbar:
-        imgs = imgs.to(device).float() / 255.0
-        targets = targets.to(device)       
+    for i, (imgs, targets) in enumerate(pbar):
+        print(f"[DEBUG] 正在处理第 {i+1}/{len(val_dataloader)} 张验证图片")
 
+        imgs = imgs.to(device).float() / 255.0
+        targets = targets.to(device)
         # Extract labels
         labels += targets[:, 1].tolist()
         # Rescale target
