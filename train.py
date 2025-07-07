@@ -85,13 +85,20 @@ if __name__ == '__main__':
                           )
 
     # 学习率衰减策略
-    scheduler = optim.lr_scheduler.MultiStepLR(optimizer,
-                                               milestones=cfg["steps"],
-                                               gamma=0.1)
+    # scheduler = optim.lr_scheduler.MultiStepLR(optimizer,
+    #                                            milestones=cfg["steps"],
+    #                                            gamma=0.1)
 
+    scheduler = optim.lr_scheduler.CosineAnnealingLR(optimizer, 
+                                                     T_max=cfg["epochs"],
+                                                    eta_min=1e-6)
     print('Starting training for %g epochs...' % cfg["epochs"])
 
     batch_num = 0
+    best_ap = 0
+    os.makedirs("weights", exist_ok=True)
+
+
     for epoch in range(cfg["epochs"]):
         model.train()
         pbar = tqdm(train_dataloader)
@@ -128,6 +135,9 @@ if __name__ == '__main__':
                     epoch, lr, iou_loss, obj_loss, cls_loss, total_loss)
             pbar.set_description(info)
 
+            with open("train_log.txt", "a") as logf:
+                logf.write(f"{epoch},{lr:.6f},{iou_loss.item():.4f},{obj_loss.item():.4f},{cls_loss.item():.4f},{total_loss.item():.4f}\n")
+
             batch_num += 1
 
         # 模型保存
@@ -143,27 +153,32 @@ if __name__ == '__main__':
 
         
             
-        best_ap = 0
-        os.makedirs("weights", exist_ok=True)
 
 
-        if epoch % 10 == 0 and epoch > 0:
-            model.eval()
-            print(f"[EVAL] 开始第 {epoch} 轮验证集评估，准备计算 mAP...")
+
+
+        model.eval()
+        print(f"[EVAL] 开始第 {epoch} 轮验证集评估，准备计算 mAP...")
     
-            AP = utils.utils.evaluation(val_dataloader, cfg, model, device)
-            print(f"[EVAL] mAP 计算完成，结果：{AP[0]:.4f}")
+        AP = utils.utils.evaluation(val_dataloader, cfg, model, device)
+        print(f"[EVAL] mAP 计算完成，结果：{AP[0]:.4f}")
 
-            print("[EVAL] 开始计算 Precision / Recall / F1...")
-            precision, recall, _, f1 = utils.utils.evaluation(val_dataloader, cfg, model, device, 0.3)
-            print(f"[EVAL] Precision: {precision:.4f}  Recall: {recall:.4f}  AP: {AP[0]:.4f}  F1: {f1:.4f}")
-            # print(f"[EVAL] Precision: {precision:.4f}  Recall: {recall:.4f}  AP: {AP[0]:.4f}  F1: {f1[0]:.4f}")
-            torch.save(model.state_dict(), "weights/%s-%d-epoch-%fap-model.pth" %
-                (cfg["model_name"], epoch, AP[0]))
-            # if AP > best_ap:
-            #     best_ap = AP
-            #     torch.save(model.state_Dict(),f"weights/best,pth")
-            #     print(f"[INFO] Saved new best model at epoch {epoch},AP:{AP:.4f}")
+        print("[EVAL] 开始计算 Precision / Recall / F1...")
+        precision, recall, _, f1 = utils.utils.evaluation(val_dataloader, cfg, model, device, 0.3)
+        print(f"[EVAL] Precision: {precision:.4f}  Recall: {recall:.4f}  AP: {AP[0]:.4f}  F1: {f1:.4f}")
+        # print(f"[EVAL] Precision: {precision:.4f}  Recall: {recall:.4f}  AP: {AP[0]:.4f}  F1: {f1[0]:.4f}")
+        # torch.save(model.state_dict(), "weights/%s-%d-epoch-%fap-model.pth" %
+         #     (cfg["model_name"], epoch, AP[0]))
+        if AP[0] > best_ap:
+            best_ap = AP[0]
+            torch.save(model.state_dict(),f"weights/best.pth")
+            print(f"[INFO] Saved new best model at epoch {epoch},AP:{AP:.4f}")
         # 学习率调整
-           
-        scheduler.step()
+        if epoch == (cfg["epochs"] - 1):
+            torch.save(model.state_dict(), "weights/last.pth")
+            print("[INFO]  Saved final model to weights/last.pth")
+
+    with open("train_log.txt", "a") as logf:
+        logf.write(f"[SUMMARY] best_ap: {best_ap:.4f}\n")        
+    
+    scheduler.step()
