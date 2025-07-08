@@ -173,7 +173,7 @@ if __name__ == '__main__':
         if AP[0] > best_ap:
             best_ap = AP[0]
             torch.save(model.state_dict(),f"weights/best.pth")
-            print(f"[INFO] Saved new best model at epoch {epoch},AP:{AP:.4f}")
+            print(f"[INFO] Saved new best model at epoch {epoch},AP:{AP[0]:.4f}")
         # 学习率调整
         if epoch == (cfg["epochs"] - 1):
             torch.save(model.state_dict(), "weights/last.pth")
