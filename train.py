@@ -33,6 +33,7 @@ if __name__ == '__main__':
     # 数据集加载
     train_dataset = utils.datasets.TensorDataset(cfg["train"], cfg["width"], cfg["height"], imgaug = True)
     val_dataset = utils.datasets.TensorDataset(cfg["val"], cfg["width"], cfg["height"], imgaug = False)
+    print(f" 加载验证集图片数：{len(val_dataset)}")
 
     batch_size = int(cfg["batch_size"] / cfg["subdivisions"])
     nw = min([os.cpu_count(), batch_size if batch_size > 1 else 0, 8])
@@ -41,10 +42,10 @@ if __name__ == '__main__':
                                                    batch_size=batch_size,
                                                    shuffle=True,
                                                    collate_fn=utils.datasets.collate_fn,
-                                                   num_workers=0,
+                                                   num_workers=nw,
                                                    pin_memory=True,
                                                    drop_last=True,
-                                                   persistent_workers=False
+                                                   persistent_workers=True
                                                    )
     #验证集
     val_dataloader = torch.utils.data.DataLoader(val_dataset,
@@ -159,23 +160,26 @@ if __name__ == '__main__':
 
         model.eval()
         print(f"[EVAL] 开始第 {epoch} 轮验证集评估，准备计算 mAP...")
+    
+        AP = utils.utils.evaluation(val_dataloader, cfg, model, device)
+        print(f"[EVAL] mAP 计算完成，结果：{AP[0]:.4f}")
 
-
-        precision, recall, ap, f1 = utils.utils.evaluation(val_dataloader, cfg, model, device, 0.3)
-        print(f"[EVAL] Precision: {precision:.4f}  Recall: {recall:.4f}  AP: {ap:.4f}  F1: {f1:.4f}")
+        print("[EVAL] 开始计算 Precision / Recall / F1...")
+        precision, recall, _, f1 = utils.utils.evaluation(val_dataloader, cfg, model, device, 0.3)
+        print(f"[EVAL] Precision: {precision:.4f}  Recall: {recall:.4f}  AP: {AP[0]:.4f}  F1: {f1:.4f}")
         # print(f"[EVAL] Precision: {precision:.4f}  Recall: {recall:.4f}  AP: {AP[0]:.4f}  F1: {f1[0]:.4f}")
         # torch.save(model.state_dict(), "weights/%s-%d-epoch-%fap-model.pth" %
          #     (cfg["model_name"], epoch, AP[0]))
-        if ap> best_ap:
-            best_ap = ap
+        if AP[0] > best_ap:
+            best_ap = AP[0]
             torch.save(model.state_dict(),f"weights/best.pth")
-            print(f"[INFO] Saved new best model at epoch {epoch},AP:{ap:.4f}")
-
+            print(f"[INFO] Saved new best model at epoch {epoch},AP:{AP:.4f}")
+        # 学习率调整
         if epoch == (cfg["epochs"] - 1):
             torch.save(model.state_dict(), "weights/last.pth")
             print("[INFO]  Saved final model to weights/last.pth")
 
     with open("train_log.txt", "a") as logf:
         logf.write(f"[SUMMARY] best_ap: {best_ap:.4f}\n")        
-        # 学习率调整
+    
     scheduler.step()

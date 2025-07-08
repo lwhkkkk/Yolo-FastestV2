@@ -1,0 +1,495 @@
+ 模型权重参数名：
+backbone.first_conv.0.weight
+backbone.first_conv.1.weight
+backbone.first_conv.1.bias
+backbone.first_conv.1.running_mean
+backbone.first_conv.1.running_var
+backbone.first_conv.1.num_batches_tracked
+backbone.stage2.0.branch_main.0.weight
+backbone.stage2.0.branch_main.1.weight
+backbone.stage2.0.branch_main.1.bias
+backbone.stage2.0.branch_main.1.running_mean
+backbone.stage2.0.branch_main.1.running_var
+backbone.stage2.0.branch_main.1.num_batches_tracked
+backbone.stage2.0.branch_main.3.weight
+backbone.stage2.0.branch_main.4.weight
+backbone.stage2.0.branch_main.4.bias
+backbone.stage2.0.branch_main.4.running_mean
+backbone.stage2.0.branch_main.4.running_var
+backbone.stage2.0.branch_main.4.num_batches_tracked
+backbone.stage2.0.branch_main.5.weight
+backbone.stage2.0.branch_main.6.weight
+backbone.stage2.0.branch_main.6.bias
+backbone.stage2.0.branch_main.6.running_mean
+backbone.stage2.0.branch_main.6.running_var
+backbone.stage2.0.branch_main.6.num_batches_tracked
+backbone.stage2.0.branch_proj.0.weight
+backbone.stage2.0.branch_proj.1.weight
+backbone.stage2.0.branch_proj.1.bias
+backbone.stage2.0.branch_proj.1.running_mean
+backbone.stage2.0.branch_proj.1.running_var
+backbone.stage2.0.branch_proj.1.num_batches_tracked
+backbone.stage2.0.branch_proj.2.weight
+backbone.stage2.0.branch_proj.3.weight
+backbone.stage2.0.branch_proj.3.bias
+backbone.stage2.0.branch_proj.3.running_mean
+backbone.stage2.0.branch_proj.3.running_var
+backbone.stage2.0.branch_proj.3.num_batches_tracked
+backbone.stage2.1.branch_main.0.weight
+backbone.stage2.1.branch_main.1.weight
+backbone.stage2.1.branch_main.1.bias
+backbone.stage2.1.branch_main.1.running_mean
+backbone.stage2.1.branch_main.1.running_var
+backbone.stage2.1.branch_main.1.num_batches_tracked
+backbone.stage2.1.branch_main.3.weight
+backbone.stage2.1.branch_main.4.weight
+backbone.stage2.1.branch_main.4.bias
+backbone.stage2.1.branch_main.4.running_mean
+backbone.stage2.1.branch_main.4.running_var
+backbone.stage2.1.branch_main.4.num_batches_tracked
+backbone.stage2.1.branch_main.5.weight
+backbone.stage2.1.branch_main.6.weight
+backbone.stage2.1.branch_main.6.bias
+backbone.stage2.1.branch_main.6.running_mean
+backbone.stage2.1.branch_main.6.running_var
+backbone.stage2.1.branch_main.6.num_batches_tracked
+backbone.stage2.2.branch_main.0.weight
+backbone.stage2.2.branch_main.1.weight
+backbone.stage2.2.branch_main.1.bias
+backbone.stage2.2.branch_main.1.running_mean
+backbone.stage2.2.branch_main.1.running_var
+backbone.stage2.2.branch_main.1.num_batches_tracked
+backbone.stage2.2.branch_main.3.weight
+backbone.stage2.2.branch_main.4.weight
+backbone.stage2.2.branch_main.4.bias
+backbone.stage2.2.branch_main.4.running_mean
+backbone.stage2.2.branch_main.4.running_var
+backbone.stage2.2.branch_main.4.num_batches_tracked
+backbone.stage2.2.branch_main.5.weight
+backbone.stage2.2.branch_main.6.weight
+backbone.stage2.2.branch_main.6.bias
+backbone.stage2.2.branch_main.6.running_mean
+backbone.stage2.2.branch_main.6.running_var
+backbone.stage2.2.branch_main.6.num_batches_tracked
+backbone.stage2.3.branch_main.0.weight
+backbone.stage2.3.branch_main.1.weight
+backbone.stage2.3.branch_main.1.bias
+backbone.stage2.3.branch_main.1.running_mean
+backbone.stage2.3.branch_main.1.running_var
+backbone.stage2.3.branch_main.1.num_batches_tracked
+backbone.stage2.3.branch_main.3.weight
+backbone.stage2.3.branch_main.4.weight
+backbone.stage2.3.branch_main.4.bias
+backbone.stage2.3.branch_main.4.running_mean
+backbone.stage2.3.branch_main.4.running_var
+backbone.stage2.3.branch_main.4.num_batches_tracked
+backbone.stage2.3.branch_main.5.weight
+backbone.stage2.3.branch_main.6.weight
+backbone.stage2.3.branch_main.6.bias
+backbone.stage2.3.branch_main.6.running_mean
+backbone.stage2.3.branch_main.6.running_var
+backbone.stage2.3.branch_main.6.num_batches_tracked
+backbone.stage3.0.branch_main.0.weight
+backbone.stage3.0.branch_main.1.weight
+backbone.stage3.0.branch_main.1.bias
+backbone.stage3.0.branch_main.1.running_mean
+backbone.stage3.0.branch_main.1.running_var
+backbone.stage3.0.branch_main.1.num_batches_tracked
+backbone.stage3.0.branch_main.3.weight
+backbone.stage3.0.branch_main.4.weight
+backbone.stage3.0.branch_main.4.bias
+backbone.stage3.0.branch_main.4.running_mean
+backbone.stage3.0.branch_main.4.running_var
+backbone.stage3.0.branch_main.4.num_batches_tracked
+backbone.stage3.0.branch_main.5.weight
+backbone.stage3.0.branch_main.6.weight
+backbone.stage3.0.branch_main.6.bias
+backbone.stage3.0.branch_main.6.running_mean
+backbone.stage3.0.branch_main.6.running_var
+backbone.stage3.0.branch_main.6.num_batches_tracked
+backbone.stage3.0.branch_proj.0.weight
+backbone.stage3.0.branch_proj.1.weight
+backbone.stage3.0.branch_proj.1.bias
+backbone.stage3.0.branch_proj.1.running_mean
+backbone.stage3.0.branch_proj.1.running_var
+backbone.stage3.0.branch_proj.1.num_batches_tracked
+backbone.stage3.0.branch_proj.2.weight
+backbone.stage3.0.branch_proj.3.weight
+backbone.stage3.0.branch_proj.3.bias
+backbone.stage3.0.branch_proj.3.running_mean
+backbone.stage3.0.branch_proj.3.running_var
+backbone.stage3.0.branch_proj.3.num_batches_tracked
+backbone.stage3.1.branch_main.0.weight
+backbone.stage3.1.branch_main.1.weight
+backbone.stage3.1.branch_main.1.bias
+backbone.stage3.1.branch_main.1.running_mean
+backbone.stage3.1.branch_main.1.running_var
+backbone.stage3.1.branch_main.1.num_batches_tracked
+backbone.stage3.1.branch_main.3.weight
+backbone.stage3.1.branch_main.4.weight
+backbone.stage3.1.branch_main.4.bias
+backbone.stage3.1.branch_main.4.running_mean
+backbone.stage3.1.branch_main.4.running_var
+backbone.stage3.1.branch_main.4.num_batches_tracked
+backbone.stage3.1.branch_main.5.weight
+backbone.stage3.1.branch_main.6.weight
+backbone.stage3.1.branch_main.6.bias
+backbone.stage3.1.branch_main.6.running_mean
+backbone.stage3.1.branch_main.6.running_var
+backbone.stage3.1.branch_main.6.num_batches_tracked
+backbone.stage3.2.branch_main.0.weight
+backbone.stage3.2.branch_main.1.weight
+backbone.stage3.2.branch_main.1.bias
+backbone.stage3.2.branch_main.1.running_mean
+backbone.stage3.2.branch_main.1.running_var
+backbone.stage3.2.branch_main.1.num_batches_tracked
+backbone.stage3.2.branch_main.3.weight
+backbone.stage3.2.branch_main.4.weight
+backbone.stage3.2.branch_main.4.bias
+backbone.stage3.2.branch_main.4.running_mean
+backbone.stage3.2.branch_main.4.running_var
+backbone.stage3.2.branch_main.4.num_batches_tracked
+backbone.stage3.2.branch_main.5.weight
+backbone.stage3.2.branch_main.6.weight
+backbone.stage3.2.branch_main.6.bias
+backbone.stage3.2.branch_main.6.running_mean
+backbone.stage3.2.branch_main.6.running_var
+backbone.stage3.2.branch_main.6.num_batches_tracked
+backbone.stage3.3.branch_main.0.weight
+backbone.stage3.3.branch_main.1.weight
+backbone.stage3.3.branch_main.1.bias
+backbone.stage3.3.branch_main.1.running_mean
+backbone.stage3.3.branch_main.1.running_var
+backbone.stage3.3.branch_main.1.num_batches_tracked
+backbone.stage3.3.branch_main.3.weight
+backbone.stage3.3.branch_main.4.weight
+backbone.stage3.3.branch_main.4.bias
+backbone.stage3.3.branch_main.4.running_mean
+backbone.stage3.3.branch_main.4.running_var
+backbone.stage3.3.branch_main.4.num_batches_tracked
+backbone.stage3.3.branch_main.5.weight
+backbone.stage3.3.branch_main.6.weight
+backbone.stage3.3.branch_main.6.bias
+backbone.stage3.3.branch_main.6.running_mean
+backbone.stage3.3.branch_main.6.running_var
+backbone.stage3.3.branch_main.6.num_batches_tracked
+backbone.stage3.4.branch_main.0.weight
+backbone.stage3.4.branch_main.1.weight
+backbone.stage3.4.branch_main.1.bias
+backbone.stage3.4.branch_main.1.running_mean
+backbone.stage3.4.branch_main.1.running_var
+backbone.stage3.4.branch_main.1.num_batches_tracked
+backbone.stage3.4.branch_main.3.weight
+backbone.stage3.4.branch_main.4.weight
+backbone.stage3.4.branch_main.4.bias
+backbone.stage3.4.branch_main.4.running_mean
+backbone.stage3.4.branch_main.4.running_var
+backbone.stage3.4.branch_main.4.num_batches_tracked
+backbone.stage3.4.branch_main.5.weight
+backbone.stage3.4.branch_main.6.weight
+backbone.stage3.4.branch_main.6.bias
+backbone.stage3.4.branch_main.6.running_mean
+backbone.stage3.4.branch_main.6.running_var
+backbone.stage3.4.branch_main.6.num_batches_tracked
+backbone.stage3.5.branch_main.0.weight
+backbone.stage3.5.branch_main.1.weight
+backbone.stage3.5.branch_main.1.bias
+backbone.stage3.5.branch_main.1.running_mean
+backbone.stage3.5.branch_main.1.running_var
+backbone.stage3.5.branch_main.1.num_batches_tracked
+backbone.stage3.5.branch_main.3.weight
+backbone.stage3.5.branch_main.4.weight
+backbone.stage3.5.branch_main.4.bias
+backbone.stage3.5.branch_main.4.running_mean
+backbone.stage3.5.branch_main.4.running_var
+backbone.stage3.5.branch_main.4.num_batches_tracked
+backbone.stage3.5.branch_main.5.weight
+backbone.stage3.5.branch_main.6.weight
+backbone.stage3.5.branch_main.6.bias
+backbone.stage3.5.branch_main.6.running_mean
+backbone.stage3.5.branch_main.6.running_var
+backbone.stage3.5.branch_main.6.num_batches_tracked
+backbone.stage3.6.branch_main.0.weight
+backbone.stage3.6.branch_main.1.weight
+backbone.stage3.6.branch_main.1.bias
+backbone.stage3.6.branch_main.1.running_mean
+backbone.stage3.6.branch_main.1.running_var
+backbone.stage3.6.branch_main.1.num_batches_tracked
+backbone.stage3.6.branch_main.3.weight
+backbone.stage3.6.branch_main.4.weight
+backbone.stage3.6.branch_main.4.bias
+backbone.stage3.6.branch_main.4.running_mean
+backbone.stage3.6.branch_main.4.running_var
+backbone.stage3.6.branch_main.4.num_batches_tracked
+backbone.stage3.6.branch_main.5.weight
+backbone.stage3.6.branch_main.6.weight
+backbone.stage3.6.branch_main.6.bias
+backbone.stage3.6.branch_main.6.running_mean
+backbone.stage3.6.branch_main.6.running_var
+backbone.stage3.6.branch_main.6.num_batches_tracked
+backbone.stage3.7.branch_main.0.weight
+backbone.stage3.7.branch_main.1.weight
+backbone.stage3.7.branch_main.1.bias
+backbone.stage3.7.branch_main.1.running_mean
+backbone.stage3.7.branch_main.1.running_var
+backbone.stage3.7.branch_main.1.num_batches_tracked
+backbone.stage3.7.branch_main.3.weight
+backbone.stage3.7.branch_main.4.weight
+backbone.stage3.7.branch_main.4.bias
+backbone.stage3.7.branch_main.4.running_mean
+backbone.stage3.7.branch_main.4.running_var
+backbone.stage3.7.branch_main.4.num_batches_tracked
+backbone.stage3.7.branch_main.5.weight
+backbone.stage3.7.branch_main.6.weight
+backbone.stage3.7.branch_main.6.bias
+backbone.stage3.7.branch_main.6.running_mean
+backbone.stage3.7.branch_main.6.running_var
+backbone.stage3.7.branch_main.6.num_batches_tracked
+backbone.stage4.0.branch_main.0.weight
+backbone.stage4.0.branch_main.1.weight
+backbone.stage4.0.branch_main.1.bias
+backbone.stage4.0.branch_main.1.running_mean
+backbone.stage4.0.branch_main.1.running_var
+backbone.stage4.0.branch_main.1.num_batches_tracked
+backbone.stage4.0.branch_main.3.weight
+backbone.stage4.0.branch_main.4.weight
+backbone.stage4.0.branch_main.4.bias
+backbone.stage4.0.branch_main.4.running_mean
+backbone.stage4.0.branch_main.4.running_var
+backbone.stage4.0.branch_main.4.num_batches_tracked
+backbone.stage4.0.branch_main.5.weight
+backbone.stage4.0.branch_main.6.weight
+backbone.stage4.0.branch_main.6.bias
+backbone.stage4.0.branch_main.6.running_mean
+backbone.stage4.0.branch_main.6.running_var
+backbone.stage4.0.branch_main.6.num_batches_tracked
+backbone.stage4.0.branch_proj.0.weight
+backbone.stage4.0.branch_proj.1.weight
+backbone.stage4.0.branch_proj.1.bias
+backbone.stage4.0.branch_proj.1.running_mean
+backbone.stage4.0.branch_proj.1.running_var
+backbone.stage4.0.branch_proj.1.num_batches_tracked
+backbone.stage4.0.branch_proj.2.weight
+backbone.stage4.0.branch_proj.3.weight
+backbone.stage4.0.branch_proj.3.bias
+backbone.stage4.0.branch_proj.3.running_mean
+backbone.stage4.0.branch_proj.3.running_var
+backbone.stage4.0.branch_proj.3.num_batches_tracked
+backbone.stage4.1.branch_main.0.weight
+backbone.stage4.1.branch_main.1.weight
+backbone.stage4.1.branch_main.1.bias
+backbone.stage4.1.branch_main.1.running_mean
+backbone.stage4.1.branch_main.1.running_var
+backbone.stage4.1.branch_main.1.num_batches_tracked
+backbone.stage4.1.branch_main.3.weight
+backbone.stage4.1.branch_main.4.weight
+backbone.stage4.1.branch_main.4.bias
+backbone.stage4.1.branch_main.4.running_mean
+backbone.stage4.1.branch_main.4.running_var
+backbone.stage4.1.branch_main.4.num_batches_tracked
+backbone.stage4.1.branch_main.5.weight
+backbone.stage4.1.branch_main.6.weight
+backbone.stage4.1.branch_main.6.bias
+backbone.stage4.1.branch_main.6.running_mean
+backbone.stage4.1.branch_main.6.running_var
+backbone.stage4.1.branch_main.6.num_batches_tracked
+backbone.stage4.2.branch_main.0.weight
+backbone.stage4.2.branch_main.1.weight
+backbone.stage4.2.branch_main.1.bias
+backbone.stage4.2.branch_main.1.running_mean
+backbone.stage4.2.branch_main.1.running_var
+backbone.stage4.2.branch_main.1.num_batches_tracked
+backbone.stage4.2.branch_main.3.weight
+backbone.stage4.2.branch_main.4.weight
+backbone.stage4.2.branch_main.4.bias
+backbone.stage4.2.branch_main.4.running_mean
+backbone.stage4.2.branch_main.4.running_var
+backbone.stage4.2.branch_main.4.num_batches_tracked
+backbone.stage4.2.branch_main.5.weight
+backbone.stage4.2.branch_main.6.weight
+backbone.stage4.2.branch_main.6.bias
+backbone.stage4.2.branch_main.6.running_mean
+backbone.stage4.2.branch_main.6.running_var
+backbone.stage4.2.branch_main.6.num_batches_tracked
+backbone.stage4.3.branch_main.0.weight
+backbone.stage4.3.branch_main.1.weight
+backbone.stage4.3.branch_main.1.bias
+backbone.stage4.3.branch_main.1.running_mean
+backbone.stage4.3.branch_main.1.running_var
+backbone.stage4.3.branch_main.1.num_batches_tracked
+backbone.stage4.3.branch_main.3.weight
+backbone.stage4.3.branch_main.4.weight
+backbone.stage4.3.branch_main.4.bias
+backbone.stage4.3.branch_main.4.running_mean
+backbone.stage4.3.branch_main.4.running_var
+backbone.stage4.3.branch_main.4.num_batches_tracked
+backbone.stage4.3.branch_main.5.weight
+backbone.stage4.3.branch_main.6.weight
+backbone.stage4.3.branch_main.6.bias
+backbone.stage4.3.branch_main.6.running_mean
+backbone.stage4.3.branch_main.6.running_var
+backbone.stage4.3.branch_main.6.num_batches_tracked
+fpn.conv1x1_2.0.weight
+fpn.conv1x1_2.1.weight
+fpn.conv1x1_2.1.bias
+fpn.conv1x1_2.1.running_mean
+fpn.conv1x1_2.1.running_var
+fpn.conv1x1_2.1.num_batches_tracked
+fpn.conv1x1_3.0.weight
+fpn.conv1x1_3.1.weight
+fpn.conv1x1_3.1.bias
+fpn.conv1x1_3.1.running_mean
+fpn.conv1x1_3.1.running_var
+fpn.conv1x1_3.1.num_batches_tracked
+fpn.cls_head_2.block.0.weight
+   该层可能与类别数有关，形状为：torch.Size([72, 1, 5, 5])
+fpn.cls_head_2.block.1.weight
+   该层可能与类别数有关，形状为：torch.Size([72])
+fpn.cls_head_2.block.1.bias
+   该层可能与类别数有关，形状为：torch.Size([72])
+fpn.cls_head_2.block.1.running_mean
+   该层可能与类别数有关，形状为：torch.Size([72])
+fpn.cls_head_2.block.1.running_var
+   该层可能与类别数有关，形状为：torch.Size([72])
+fpn.cls_head_2.block.1.num_batches_tracked
+   该层可能与类别数有关，形状为：torch.Size([])
+fpn.cls_head_2.block.3.weight
+   该层可能与类别数有关，形状为：torch.Size([72, 72, 1, 1])
+fpn.cls_head_2.block.4.weight
+   该层可能与类别数有关，形状为：torch.Size([72])
+fpn.cls_head_2.block.4.bias
+   该层可能与类别数有关，形状为：torch.Size([72])
+fpn.cls_head_2.block.4.running_mean
+   该层可能与类别数有关，形状为：torch.Size([72])
+fpn.cls_head_2.block.4.running_var
+   该层可能与类别数有关，形状为：torch.Size([72])
+fpn.cls_head_2.block.4.num_batches_tracked
+   该层可能与类别数有关，形状为：torch.Size([])
+fpn.cls_head_2.block.5.weight
+   该层可能与类别数有关，形状为：torch.Size([72, 1, 5, 5])
+fpn.cls_head_2.block.6.weight
+   该层可能与类别数有关，形状为：torch.Size([72])
+fpn.cls_head_2.block.6.bias
+   该层可能与类别数有关，形状为：torch.Size([72])
+fpn.cls_head_2.block.6.running_mean
+   该层可能与类别数有关，形状为：torch.Size([72])
+fpn.cls_head_2.block.6.running_var
+   该层可能与类别数有关，形状为：torch.Size([72])
+fpn.cls_head_2.block.6.num_batches_tracked
+   该层可能与类别数有关，形状为：torch.Size([])
+fpn.cls_head_2.block.8.weight
+   该层可能与类别数有关，形状为：torch.Size([72, 72, 1, 1])
+fpn.cls_head_2.block.9.weight
+   该层可能与类别数有关，形状为：torch.Size([72])
+fpn.cls_head_2.block.9.bias
+   该层可能与类别数有关，形状为：torch.Size([72])
+fpn.cls_head_2.block.9.running_mean
+   该层可能与类别数有关，形状为：torch.Size([72])
+fpn.cls_head_2.block.9.running_var
+   该层可能与类别数有关，形状为：torch.Size([72])
+fpn.cls_head_2.block.9.num_batches_tracked
+   该层可能与类别数有关，形状为：torch.Size([])
+fpn.reg_head_2.block.0.weight
+fpn.reg_head_2.block.1.weight
+fpn.reg_head_2.block.1.bias
+fpn.reg_head_2.block.1.running_mean
+fpn.reg_head_2.block.1.running_var
+fpn.reg_head_2.block.1.num_batches_tracked
+fpn.reg_head_2.block.3.weight
+fpn.reg_head_2.block.4.weight
+fpn.reg_head_2.block.4.bias
+fpn.reg_head_2.block.4.running_mean
+fpn.reg_head_2.block.4.running_var
+fpn.reg_head_2.block.4.num_batches_tracked
+fpn.reg_head_2.block.5.weight
+fpn.reg_head_2.block.6.weight
+fpn.reg_head_2.block.6.bias
+fpn.reg_head_2.block.6.running_mean
+fpn.reg_head_2.block.6.running_var
+fpn.reg_head_2.block.6.num_batches_tracked
+fpn.reg_head_2.block.8.weight
+fpn.reg_head_2.block.9.weight
+fpn.reg_head_2.block.9.bias
+fpn.reg_head_2.block.9.running_mean
+fpn.reg_head_2.block.9.running_var
+fpn.reg_head_2.block.9.num_batches_tracked
+fpn.reg_head_3.block.0.weight
+fpn.reg_head_3.block.1.weight
+fpn.reg_head_3.block.1.bias
+fpn.reg_head_3.block.1.running_mean
+fpn.reg_head_3.block.1.running_var
+fpn.reg_head_3.block.1.num_batches_tracked
+fpn.reg_head_3.block.3.weight
+fpn.reg_head_3.block.4.weight
+fpn.reg_head_3.block.4.bias
+fpn.reg_head_3.block.4.running_mean
+fpn.reg_head_3.block.4.running_var
+fpn.reg_head_3.block.4.num_batches_tracked
+fpn.reg_head_3.block.5.weight
+fpn.reg_head_3.block.6.weight
+fpn.reg_head_3.block.6.bias
+fpn.reg_head_3.block.6.running_mean
+fpn.reg_head_3.block.6.running_var
+fpn.reg_head_3.block.6.num_batches_tracked
+fpn.reg_head_3.block.8.weight
+fpn.reg_head_3.block.9.weight
+fpn.reg_head_3.block.9.bias
+fpn.reg_head_3.block.9.running_mean
+fpn.reg_head_3.block.9.running_var
+fpn.reg_head_3.block.9.num_batches_tracked
+fpn.cls_head_3.block.0.weight
+   该层可能与类别数有关，形状为：torch.Size([72, 1, 5, 5])
+fpn.cls_head_3.block.1.weight
+   该层可能与类别数有关，形状为：torch.Size([72])
+fpn.cls_head_3.block.1.bias
+   该层可能与类别数有关，形状为：torch.Size([72])
+fpn.cls_head_3.block.1.running_mean
+   该层可能与类别数有关，形状为：torch.Size([72])
+fpn.cls_head_3.block.1.running_var
+   该层可能与类别数有关，形状为：torch.Size([72])
+fpn.cls_head_3.block.1.num_batches_tracked
+   该层可能与类别数有关，形状为：torch.Size([])
+fpn.cls_head_3.block.3.weight
+   该层可能与类别数有关，形状为：torch.Size([72, 72, 1, 1])
+fpn.cls_head_3.block.4.weight
+   该层可能与类别数有关，形状为：torch.Size([72])
+fpn.cls_head_3.block.4.bias
+   该层可能与类别数有关，形状为：torch.Size([72])
+fpn.cls_head_3.block.4.running_mean
+   该层可能与类别数有关，形状为：torch.Size([72])
+fpn.cls_head_3.block.4.running_var
+   该层可能与类别数有关，形状为：torch.Size([72])
+fpn.cls_head_3.block.4.num_batches_tracked
+   该层可能与类别数有关，形状为：torch.Size([])
+fpn.cls_head_3.block.5.weight
+   该层可能与类别数有关，形状为：torch.Size([72, 1, 5, 5])
+fpn.cls_head_3.block.6.weight
+   该层可能与类别数有关，形状为：torch.Size([72])
+fpn.cls_head_3.block.6.bias
+   该层可能与类别数有关，形状为：torch.Size([72])
+fpn.cls_head_3.block.6.running_mean
+   该层可能与类别数有关，形状为：torch.Size([72])
+fpn.cls_head_3.block.6.running_var
+   该层可能与类别数有关，形状为：torch.Size([72])
+fpn.cls_head_3.block.6.num_batches_tracked
+   该层可能与类别数有关，形状为：torch.Size([])
+fpn.cls_head_3.block.8.weight
+   该层可能与类别数有关，形状为：torch.Size([72, 72, 1, 1])
+fpn.cls_head_3.block.9.weight
+   该层可能与类别数有关，形状为：torch.Size([72])
+fpn.cls_head_3.block.9.bias
+   该层可能与类别数有关，形状为：torch.Size([72])
+fpn.cls_head_3.block.9.running_mean
+   该层可能与类别数有关，形状为：torch.Size([72])
+fpn.cls_head_3.block.9.running_var
+   该层可能与类别数有关，形状为：torch.Size([72])
+fpn.cls_head_3.block.9.num_batches_tracked
+   该层可能与类别数有关，形状为：torch.Size([])
+output_reg_layers.weight
+output_reg_layers.bias
+output_obj_layers.weight
+output_obj_layers.bias
+output_cls_layers.weight
+   该层可能与类别数有关，形状为：torch.Size([80, 72, 1, 1])
+output_cls_layers.bias
+   该层可能与类别数有关，形状为：torch.Size([80])

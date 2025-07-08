@@ -30,7 +30,7 @@ def IOU(x,centroids):
             similarity = (c_w*c_h)/(w*h)
         similarities.append(similarity) # will become (k,) shape
     return np.array(similarities) 
-
+ 
 def avg_IOU(X,centroids):
     n,d = X.shape
     sum = 0.
@@ -92,7 +92,7 @@ def kmeans(X,centroids,eps,anchor_file, width_in_cfg_file, height_in_cfg_file):
             return
 
         #calculate new centroids
-        centroid_sums=np.zeros((k,dim),np.float)
+        centroid_sums=np.zeros((k,dim),np.float64)
         for i in range(N):
             centroid_sums[assignments[i]]+=X[i]        
         for j in range(k):            
@@ -132,13 +132,24 @@ def main(argv):
                     
         #line = line.replace('images','labels')
         #line = line.replace('img1','labels')
-        line = line.replace('JPEGImages','labels')        
+        # line = line.replace('JPEGImages','labels')        
         
 
-        line = line.replace('.jpg','.txt')
-        line = line.replace('.png','.txt')
+        # line = line.replace('.jpg','.txt')
+        # line = line.replace('.png','.txt')
+        # 将 "images" 替换成 "labels"，并将图片扩展名换成 .txt
+        # line = line.replace('/images/', '/labels/').replace('\\images\\', '\\labels\\')  # 针对不同系统路径写法
+        line = line.replace('train/images', 'train/labels')
+        line = line.replace('.jpg','.txt').replace('.png','.txt').replace('.jpeg','.txt')
+
         print(line)
-        f2 = open(line)
+        print("Trying to open:", repr(line))  # ← 打印原始路径，检查是否有空格或 \r 等隐藏符
+
+        label_path = os.path.normpath(line.strip())  # 自动统一路径分隔符
+        f2 = open(label_path)
+
+
+
         for line in f2.readlines():
             line = line.rstrip('\n')
             w,h = line.split(' ')[3:]            
